@@ -272,10 +272,10 @@ export default function Home() {
           ================================================= */}
           <div>
             {/* Profile */}
-            <div className="mb-10 flex items-center gap-6">
+            <div className="mb-10 flex min-w-0 flex-row items-center gap-4 sm:gap-6">
 
               {/* Profile Image */}
-              <div className="relative h-[250px] w-[230px] shrink-0">
+              <div className="relative h-[180px] w-[165px] shrink-0 sm:h-[250px] sm:w-[230px]">
 
                 {/* Glow */}
                 <div className="absolute inset-0 rounded-full bg-violet-500/20 blur-3xl" />
@@ -296,13 +296,13 @@ export default function Home() {
                 </div>
 
                 {/* Online indicator */}
-                <div className="absolute bottom-8 right-3 flex h-7 w-7 items-center justify-center rounded-full border-4 border-[#07070a] bg-emerald-400">
+                <div className="absolute bottom-3 right-3 flex h-7 w-7 items-center justify-center rounded-full border-4 border-[#07070a] bg-emerald-400 sm:bottom-5 sm:right-5 lg:bottom-4 lg:right-7">
                   <span className="h-2.5 w-2.5 rounded-full bg-emerald-950" />
                 </div>
               </div>
 
               {/* Name / Role */}
-              <div>
+              <div className="min-w-0">
                 <p className="whitespace-nowrap text-2xl font-medium tracking-tight text-white sm:text-3xl">
                   Mohamed Hashed V R
                 </p>
@@ -343,33 +343,106 @@ export default function Home() {
             </p>
 
             {/* Buttons */}
-            <div className="mt-9 flex flex-wrap gap-4">
+            <div className="mt-9 flex flex-wrap gap-3">
+              {/* View my work */}
               <a
                 href="#projects"
-                className="rounded-full bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-zinc-200"
+                className="group inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-medium text-black shadow-lg shadow-white/5 transition-all duration-300 hover:-translate-y-0.5 hover:bg-zinc-200"
               >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5"
+                >
+                  <path d="M3 7.5 12 3l9 4.5-9 4.5L3 7.5Z" />
+                  <path d="m3 12 9 4.5 9-4.5" />
+                  <path d="m3 16.5 9 4.5 9-4.5" />
+                </svg>
+
                 View my work
               </a>
 
+              {/* Get in touch */}
               <a
                 href="#contact"
-                className="rounded-full border border-white/10 bg-white/[0.04] px-6 py-3 text-sm font-medium text-zinc-200 transition hover:border-white/20 hover:bg-white/[0.08]"
+                className="group inline-flex items-center gap-2 rounded-full border border-white/[0.1] bg-white/[0.04] px-5 py-3 text-sm font-medium text-zinc-200 backdrop-blur-xl transition-all duration-300 hover:-translate-y-0.5 hover:border-violet-400/30 hover:bg-violet-400/[0.08] hover:text-white"
               >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5"
+                >
+                  <rect x="3" y="5" width="18" height="14" rx="2" />
+                  <path d="m3 7 9 6 9-6" />
+                </svg>
+
                 Get in touch
               </a>
+
+              {/* Download Resume */}
+              <button
+                type="button"
+                onClick={() => setResumeOpen(true)}
+                className="group inline-flex items-center gap-2 rounded-full border border-violet-400/20 bg-violet-500/[0.08] px-5 py-3 text-sm font-medium text-violet-100 backdrop-blur-xl transition-all duration-300 hover:-translate-y-0.5 hover:border-violet-400/40 hover:bg-violet-500/[0.14] hover:text-white hover:shadow-lg hover:shadow-violet-500/10"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  className="h-4 w-4 transition-transform duration-300 group-hover:translate-y-0.5"
+                >
+                  <path d="M12 3v12" />
+                  <path d="m7 10 5 5 5-5" />
+                  <path d="M5 21h14" />
+                </svg>
+
+                Download Resume
+              </button>
             </div>
 
             {/* Socials */}
-            <div className="mt-8 flex flex-wrap items-center gap-5 text-sm text-zinc-500">
+            <div className="mt-8 flex flex-wrap items-center gap-3">
               {socials.map((social) => (
                 <a
                   key={social.name}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="transition-colors hover:text-white"
+                  className="group flex items-center gap-2 rounded-xl border border-white/[0.08] bg-white/[0.025] px-4 py-2.5 text-sm text-zinc-400 backdrop-blur-xl transition-all duration-300 hover:-translate-y-0.5 hover:border-violet-400/30 hover:bg-white/[0.05] hover:text-white"
                 >
-                  {social.name} ↗
+                  {social.name === "GitHub" && (
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      className="h-5 w-5"
+                    >
+                      <path d="M12 2C6.48 2 2 6.58 2 12.24c0 4.52 2.87 8.36 6.84 9.72.5.1.68-.22.68-.49 0-.24-.01-.88-.01-1.73-2.78.62-3.37-1.38-3.37-1.38-.46-1.19-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .08 1.53 1.06 1.53 1.06.9 1.58 2.35 1.12 2.92.86.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05A9.2 9.2 0 0 1 12 6.15c.85 0 1.7.12 2.5.36 1.91-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.07.36.32.68.95.68 1.92 0 1.38-.01 2.49-.01 2.83 0 .27.18.6.69.49A10.25 10.25 0 0 0 22 12.24C22 6.58 17.52 2 12 2Z" />
+                    </svg>
+                  )}
+
+                  {social.name === "LinkedIn" && (
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      className="h- w-5"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M20.45 20.45h-3.56v-5.58c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.68H9.35V8.98h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.62 0 4.29 2.38 4.29 5.48v6.28ZM5.33 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM3.55 20.45h3.56V8.98H3.55v11.47Z"
+                      />
+                    </svg>
+                  )}
+
+                  {social.name === "LeetCode" && (
+                    <span className="text-sm font-bold leading-none">LC</span>
+                  )}
+
+                  <span>{social.name}</span>
                 </a>
               ))}
             </div>
@@ -522,7 +595,7 @@ export default function Home() {
                     </span>{" "}
 
                     <span className="text-emerald-300">
-                      &quot;Building&quot;
+                      &quot;Open for Opportunities&quot;
                     </span>
 
                     <span className="text-zinc-500">
@@ -1886,7 +1959,7 @@ export default function Home() {
       ================================================= */}
       <section
         id="contact"
-        className="relative z-10 mx-auto w-full max-w-7xl px-6 pb-24 lg:px-10"
+        className="relative z-10 mx-auto w-full min-w-0 max-w-7xl px-4 pb-24 sm:px-6 lg:px-10"
       >
         {/* Section heading */}
         <div className="mb-12">
@@ -2370,33 +2443,18 @@ export default function Home() {
                 Find me online
               </p>
 
-              <div className="flex flex-wrap gap-5 text-sm text-zinc-400">
-                <a
-                  href="https://github.com/Hashidvr"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="transition-colors hover:text-white"
-                >
-                  GitHub ↗
-                </a>
-
-                <a
-                  href="https://linkedin.com/in/mohamed-hashed-6b820b2a6"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="transition-colors hover:text-white"
-                >
-                  LinkedIn ↗
-                </a>
-
-                <a
-                  href="https://leetcode.com/u/Hashidvr"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="transition-colors hover:text-white"
-                >
-                  LeetCode ↗
-                </a>
+              <div className="flex flex-wrap items-center gap-5 text-sm text-zinc-500">
+                {socials.map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline-offset-4 transition-colors hover:text-white hover:underline"
+                  >
+                    {social.name}
+                  </a>
+                ))}
               </div>
             </div>
           </div>
