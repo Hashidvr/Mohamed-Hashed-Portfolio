@@ -24,3 +24,73 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes floatBadge {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes floatBadgeReverse {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+@keyframes floatEditor {
+  0%,
+  100% {
+    margin-top: 0;
+  }
+
+  50% {
+    margin-top: -8px;
+  }
+}
+
+@keyframes softGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 rgba(139, 92, 246, 0);
+  }
+
+  50% {
+    box-shadow: 0 0 35px rgba(139, 92, 246, 0.08);
+  }
+}
+
+.ai-badge {
+  animation: floatBadge 4s ease-in-out infinite;
+}
+
+.python-badge {
+  animation: floatBadgeReverse 5s ease-in-out infinite;
+}
+
+.django-badge {
+  animation: floatBadge 4.5s ease-in-out infinite;
+}
+
+.rest-badge {
+  animation: floatBadgeReverse 5.5s ease-in-out infinite;
+}
+
+.sql-badge {
+  animation: floatBadge 4.8s ease-in-out infinite;
+}
+
+.code-editor {
+  animation:
+    floatEditor 5s ease-in-out infinite,
+    softGlow 5s ease-in-out infinite;
+}
