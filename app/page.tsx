@@ -272,10 +272,10 @@ export default function Home() {
           ================================================= */}
           <div>
             {/* Profile */}
-            <div className="mb-10 flex min-w-0 flex-row items-center gap-4 sm:gap-6">
+            <div className="mb-10 flex min-w-0 flex-row items-center gap-3 sm:gap-6">
 
               {/* Profile Image */}
-              <div className="relative h-[180px] w-[165px] shrink-0 sm:h-[250px] sm:w-[230px]">
+              <div className="relative h-[120px] w-[120px] shrink-0 sm:h-[250px] sm:w-[230px]">
 
                 {/* Glow */}
                 <div className="absolute inset-0 rounded-full bg-violet-500/20 blur-3xl" />
@@ -296,14 +296,14 @@ export default function Home() {
                 </div>
 
                 {/* Online indicator */}
-                <div className="absolute bottom-3 right-3 flex h-7 w-7 items-center justify-center rounded-full border-4 border-[#07070a] bg-emerald-400 sm:bottom-5 sm:right-5 lg:bottom-4 lg:right-7">
-                  <span className="h-2.5 w-2.5 rounded-full bg-emerald-950" />
+                <div className="absolute bottom-2 right-2 flex h-6 w-6 items-center justify-center rounded-full border-[3px] border-[#07070a] bg-emerald-400 sm:bottom-5 sm:right-5 sm:h-7 sm:w-7 lg:bottom-4 lg:right-7">
+                  <span className="h-2 w-2 rounded-full bg-emerald-950 sm:h-2.5 sm:w-2.5" />
                 </div>
               </div>
 
               {/* Name / Role */}
               <div className="min-w-0">
-                <p className="whitespace-nowrap text-2xl font-medium tracking-tight text-white sm:text-3xl">
+                <p className="whitespace-nowrap text-2xl font-medium tracking-tight text-white scale-[0.85] origin-left sm:scale-100 sm:text-3xl">
                   Mohamed Hashed V R
                 </p>
 
@@ -322,7 +322,7 @@ export default function Home() {
             <div className="mb-6 flex items-center gap-3">
               <span className="h-px w-8 bg-violet-400/60" />
 
-              <span className="text-xs font-medium uppercase tracking-[0.25em] text-violet-300">
+              <span className="whitespace-nowrap text-[11px] font-medium uppercase tracking-[0.18em] text-violet-300 sm:text-xs sm:tracking-[0.25em]">
                 Software Engineer · Backend + AI
               </span>
             </div>
@@ -343,7 +343,7 @@ export default function Home() {
             </p>
 
             {/* Buttons */}
-            <div className="mt-9 flex flex-wrap gap-3">
+            <div className="mt-9 flex flex-wrap justify-center gap-3 sm:justify-start">
               {/* View my work */}
               <a
                 href="#projects"
@@ -406,14 +406,14 @@ export default function Home() {
             </div>
 
             {/* Socials */}
-            <div className="mt-8 flex flex-wrap items-center gap-3">
+            <div className="mt-8 flex flex-nowrap items-center justify-center gap-2 sm:justify-start sm:gap-3">
               {socials.map((social) => (
                 <a
                   key={social.name}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center gap-2 rounded-xl border border-white/[0.08] bg-white/[0.025] px-4 py-2.5 text-sm text-zinc-400 backdrop-blur-xl transition-all duration-300 hover:-translate-y-0.5 hover:border-violet-400/30 hover:bg-white/[0.05] hover:text-white"
+                  className="group flex items-center gap-1.5 rounded-xl border border-white/[0.08] bg-white/[0.025] px-2.5 py-2 text-xs text-zinc-400 backdrop-blur-xl transition-all duration-300 hover:-translate-y-0.5 hover:border-violet-400/30 hover:bg-white/[0.05] hover:text-white sm:gap-2 sm:px-4 sm:py-2.5 sm:text-sm"
                 >
                   {social.name === "GitHub" && (
                     <svg
@@ -453,7 +453,7 @@ export default function Home() {
           ================================================= */}
           <div className="relative mx-auto w-full max-w-[680px]">
 
-            <div className="relative mt-8 h-[430px] w-full">
+            <div className="relative mx-auto mt-8 h-[430px] w-[94%] sm:w-full">
 
               {/* Main glow */}
               <div className="absolute left-1/2 top-1/2 h-[300px] w-[300px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet-600/10 blur-[110px]" />
@@ -616,7 +616,7 @@ export default function Home() {
               ================================================= */}
 
               {/* AI / ML */}
-              <div className="tech-badge ai-badge absolute left-[2%] top-[30%] z-20 flex items-center gap-2 rounded-xl border border-violet-400/20 bg-violet-400/[0.05] px-4 py-2.5 text-xs font-semibold text-violet-300 backdrop-blur-xl sm:left-0 sm:text-sm">
+              <div className="tech-badge ai-badge absolute left-[-3%] top-[30%] z-20 flex items-center gap-2 rounded-xl border border-violet-400/20 bg-violet-400/[0.05] px-4 py-2.5 text-xs font-semibold text-violet-300 backdrop-blur-xl sm:left-0 sm:text-sm">
                 <span className="h-2.5 w-2.5 rounded-full bg-violet-400 shadow-[0_0_10px_rgba(167,139,250,0.8)]" />
                 AI / ML
               </div>
@@ -628,13 +628,13 @@ export default function Home() {
               </div>
 
               {/* Django */}
-              <div className="tech-badge django-badge absolute bottom-[13%] left-[8%] z-20 flex items-center gap-2 rounded-xl border border-emerald-400/20 bg-emerald-400/[0.05] px-4 py-2.5 text-xs font-semibold text-emerald-300 backdrop-blur-xl sm:left-[10%] sm:text-sm">
+              <div className="tech-badge django-badge absolute bottom-[5%] left-[8%] z-20 flex items-center gap-2 rounded-xl border border-emerald-400/20 bg-emerald-400/[0.05] px-4 py-2.5 text-xs font-semibold text-emerald-300 backdrop-blur-xl sm:left-[10%] sm:text-sm">
                 <span className="h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_10px_rgba(52,211,153,0.8)]" />
                 Django
               </div>
 
               {/* REST APIs */}
-              <div className="tech-badge rest-badge absolute bottom-[4%] right-[7%] z-20 flex items-center gap-2 rounded-xl border border-cyan-400/20 bg-cyan-400/[0.05] px-4 py-2.5 text-xs font-semibold text-cyan-300 backdrop-blur-xl sm:right-[10%] sm:text-sm">
+              <div className="tech-badge rest-badge absolute bottom-[6%] right-[7%] z-20 flex items-center gap-2 rounded-xl border border-cyan-400/20 bg-cyan-400/[0.05] px-4 py-2.5 text-xs font-semibold text-cyan-300 backdrop-blur-xl sm:right-[10%] sm:text-sm">
                 <span className="h-2.5 w-2.5 rounded-full bg-cyan-400 shadow-[0_0_10px_rgba(34,211,238,0.8)]" />
                 REST APIs
               </div>
@@ -1984,12 +1984,12 @@ export default function Home() {
 
 
         {/* Contact layout */}
-        <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
+        <div className="grid min-w-0 gap-6 lg:grid-cols-[0.9fr_1.1fr]">
 
           {/* =================================================
               LEFT — CONTACT DETAILS
           ================================================= */}
-          <div className="space-y-4">
+          <div className="min-w-0 space-y-4">
 
             {/* =================================================
             EMAIL
@@ -2033,8 +2033,26 @@ export default function Home() {
                 </p>
               </div>
 
-              <span className="text-lg text-zinc-600 transition-colors group-hover:text-blue-300">
-                ↗
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-zinc-500 transition-all duration-300 group-hover:border-blue-400/20 group-hover:bg-blue-400/[0.06] group-hover:text-blue-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  className="h-4 w-4"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M7 17 17 7"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M8 7h9v9"
+                  />
+                </svg>
               </span>
             </a>
 
@@ -2073,8 +2091,26 @@ export default function Home() {
                 </p>
               </div>
 
-              <span className="text-lg text-zinc-600 transition-colors group-hover:text-violet-300">
-                ↗
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-zinc-500 transition-all duration-300 group-hover:border-blue-400/20 group-hover:bg-blue-400/[0.06] group-hover:text-blue-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  className="h-4 w-4"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M7 17 17 7"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M8 7h9v9"
+                  />
+                </svg>
               </span>
             </a>
 
@@ -2109,8 +2145,26 @@ export default function Home() {
                 </p>
               </div>
 
-              <span className="text-lg text-zinc-600 transition-colors group-hover:text-blue-300">
-                ↗
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-zinc-500 transition-all duration-300 group-hover:border-blue-400/20 group-hover:bg-blue-400/[0.06] group-hover:text-blue-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  className="h-4 w-4"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M7 17 17 7"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M8 7h9v9"
+                  />
+                </svg>
               </span>
             </a>
 
@@ -2145,8 +2199,26 @@ export default function Home() {
                 </p>
               </div>
 
-              <span className="text-lg text-zinc-600 transition-colors group-hover:text-zinc-300">
-                ↗
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-zinc-500 transition-all duration-300 group-hover:border-blue-400/20 group-hover:bg-blue-400/[0.06] group-hover:text-blue-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  className="h-4 w-4"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M7 17 17 7"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M8 7h9v9"
+                  />
+                </svg>
               </span>
             </a>
 
@@ -2192,8 +2264,26 @@ export default function Home() {
                 </p>
               </div>
 
-              <span className="text-lg text-zinc-600 transition-colors group-hover:text-emerald-300">
-                ↗
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-zinc-500 transition-all duration-300 group-hover:border-blue-400/20 group-hover:bg-blue-400/[0.06] group-hover:text-blue-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  className="h-4 w-4"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M7 17 17 7"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M8 7h9v9"
+                  />
+                </svg>
               </span>
             </a>
 
@@ -2558,8 +2648,8 @@ function CodeLine({
   children: ReactNode;
 }) {
   return (
-    <div className="flex">
-      <span className="mr-6 w-5 select-none text-right text-xs text-zinc-700">
+    <div className="flex items-baseline ">
+      <span className="mr-5 w-6 shrink-0 select-none text-right text-xs text-zinc-700">
         {number}
       </span>
 
