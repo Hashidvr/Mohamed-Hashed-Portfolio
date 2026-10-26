@@ -18,15 +18,38 @@ const socials = [
   },
 ];
 
+
 const projects = [
+  {
+    title: "TaskMaster",
+    description:
+      "An AI-powered task management platform with project organization, deadlines, task tracking, secure authentication, and Gemini AI document analysis.",
+    image: "/projects/taskmaster.jpg",
+    tags: [
+      "React",
+      "Vite",
+      "Django REST",
+      "PostgreSQL",
+      "Cookie-Based JWT Auth",
+      "Gemini AI",
+    ],
+    github: "https://github.com/Hashidvr/taskmaster",
+    live: "https://taskmaster-hashi8.vercel.app/",
+  },
   {
     title: "CorpDocs",
     description:
-      "A document collaboration platform with document editing, version history, user mentions, access control, REST APIs, and email notifications.",
+      "A document collaboration platform featuring rich-text editing, document version history, user mentions, access control, public and private documents, and email notifications.",
     image: "/projects/corpdocs.jpg",
-    tags: ["Django REST", "React Native", "SQLite", "LLM"],
-    github:
-      "https://github.com/Hashidvr/CorpDocs-Platform",
+    tags: [
+      "React",
+      "Tailwind CSS",
+      "Django REST Framework",
+      "SimpleJWT",
+      "SQLite",
+      "Gmail SMTP",
+    ],
+    github: "https://github.com/Hashidvr/CorpDocs-Platform",
   },
   {
     title: "Voice-Assisted Gesture-Based Drawing Tool",
@@ -47,6 +70,7 @@ const projects = [
       "https://github.com/Hashidvr/STUDENT-MANAGEMENT-SYSTEM",
   },
 ];
+
 
 export default function Home() {
   const [resumeOpen, setResumeOpen] = useState(false);
@@ -1915,38 +1939,75 @@ export default function Home() {
                   </a>
 
                   {/* Live Demo - inactive for now */}
-                  <button
-                    type="button"
-                    disabled
-                    className="flex cursor-not-allowed items-center justify-center gap-2 rounded-xl border border-white/[0.05] bg-white/[0.015] px-4 py-3 text-sm font-medium text-zinc-700"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.8"
-                      className="h-4 w-4"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M14 3h7v7"
-                      />
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M10 14 21 3"
-                      />
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"
-                      />
-                    </svg>
 
-                    <span>Live Demo</span>
-                  </button>
+                  {/* Live Demo */}
+                  {project.live ? (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2 rounded-xl border border-violet-400/20 bg-violet-400/[0.06] px-4 py-3 text-sm font-medium text-violet-300 transition-all duration-300 hover:border-violet-400/40 hover:bg-violet-400/[0.12] hover:text-white"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.8"
+                        className="h-4 w-4"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M14 3h7v7"
+                        />
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M10 14 21 3"
+                        />
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"
+                        />
+                      </svg>
+                      <span>Live Demo</span>
+                    </a>
+                  ) : (
+                    <button
+                      type="button"
+                      disabled
+                      className="flex cursor-not-allowed items-center justify-center gap-2 rounded-xl border border-white/[0.05] bg-white/[0.015] px-4 py-3 text-sm font-medium text-zinc-700"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.8"
+                        className="h-4 w-4"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M14 3h7v7"
+                        />
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M10 14 21 3"
+                        />
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"
+                        />
+                      </svg>
+                      <span>Live Demo</span>
+                    </button>
+                  )}
+
                 </div>
               </div>
             </article>
